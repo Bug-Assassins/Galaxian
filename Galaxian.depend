@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1397651172 source:/home/ashish/Desktop/Galaxian/main.c
+	<stdio.h>
+	<stdlib.h>
+	<GL/glx.h>
+	<GL/gl.h>
+	<X11/X.h>
+	<X11/keysym.h>
+
+1397758230 source:/home/ashish/Desktop/Galaxian/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<windows.h>
+	<GL/glut.h>
+	<windows.h>
+	<GL/glut.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<limits.h>
+	<unistd.h>
+	<time.h>
+	<math.h>
+	<cstring>
+	<iostream>
+	<vector>
+	"declaration.cpp"
+	"utility.cpp"
+	"draw.cpp"
+	"move.cpp"
+	"callback.cpp"
+
+1397749550 /home/ashish/Desktop/Galaxian/declaration.cpp
+
+1397753071 /home/ashish/Desktop/Galaxian/utility.cpp
+	"declaration.cpp"
+
+1397758264 /home/ashish/Desktop/Galaxian/draw.cpp
+	"declaration.cpp"
+
+1397753309 /home/ashish/Desktop/Galaxian/move.cpp
+
+1397752981 /home/ashish/Desktop/Galaxian/callback.cpp
+	"declaration.cpp"
+
