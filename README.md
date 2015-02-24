@@ -7,8 +7,8 @@ The project was made with an objective of learning 2D Animations and basic trans
 
 Installation on Linux Distribution
 
-1. Install OpenGL using the following command: sudo apt-get install freeglut3 freeglut3.dev
-2. Open the main.cpp file and compile it with: gcc -lGL - lGLU - lglut
+1. Install OpenGL using the following command: sudo apt-get install freeglut3 freeglut3-dev mesa-utils
+2. Open the main.cpp file and compile it with: gcc main.cpp -lGL -lGLU -lglut -lstdc++
 
 Note : Game may not work properly in windows. For best result use any linux distribution.
 
