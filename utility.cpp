@@ -111,15 +111,15 @@ void get_high_score()
 void set_high_score()
 {
 
-    if(curr_score<=high_score) return;
-    high_score=curr_score;
+    if(curr_score <= high_score) return;
+    high_score = curr_score;
     FILE *out;
     out = fopen("highscore","wb");
-    if(out==NULL)
+    if(out == NULL)
     {
         return;
     }
-    fwrite(&high_score,1,sizeof(long long int),out);
+    fwrite(&high_score, 1, sizeof(long long int), out);
     fclose(out);
 }
 

@@ -6,9 +6,9 @@ void keyboard_func(int k, int x, int y)
 {
     switch(k)
     {
-        case GLUT_KEY_LEFT: ship_left=true,ship_right=false;
+        case GLUT_KEY_LEFT: ship_left = true, ship_right = false;
                             break;
-        case GLUT_KEY_RIGHT: ship_right=true,ship_left=false;
+        case GLUT_KEY_RIGHT: ship_right = true,ship_left = false;
                              break;
     }
 }
@@ -16,9 +16,9 @@ void keyboard_up_func(int k, int x, int y)
 {
     switch(k)
     {
-        case GLUT_KEY_LEFT: ship_left=false;
+        case GLUT_KEY_LEFT: ship_left = false;
                             break;
-        case GLUT_KEY_RIGHT:ship_right=false;
+        case GLUT_KEY_RIGHT:ship_right = false;
                             break;
     }
 }
@@ -95,44 +95,44 @@ void mouse_motion(int x, int y)
 {
     switch(game_state)
     {
-        case 1: if(y>=down_bound_start_start && y<=up_bound_start_start && x>=left_bound_start && x<=right_bound_start)
+        case 1: if(y >= down_bound_start_start && y <= up_bound_start_start && x >= left_bound_start && x <= right_bound_start)
                 {
                     start_mouse_hover_start = true;
                 }
                 else start_mouse_hover_start = false;
 
-                if(y>=down_bound_start_quit && y<=up_bound_start_quit && x>=left_bound_start && x<=right_bound_start)
+                if(y >= down_bound_start_quit && y <= up_bound_start_quit && x >= left_bound_start && x <= right_bound_start)
                 {
                     start_mouse_hover_quit = true;
                 }
                 else start_mouse_hover_quit = false;
                 break;
 
-        case 2: if(x<=0)    ship_x = 0;
+        case 2: if(x <= 0)  ship_x = 0;
                 else if(x >= (width - ship_span)) ship_x = width - ship_span;
                 else ship_x = x;
                 break;
 
-        case 3: if(y>=down_bound_pause && y<=up_bound_pause && x>=left_bound_pause_quit && x<=right_bound_pause_quit)
+        case 3: if(y >= down_bound_pause && y <= up_bound_pause && x >= left_bound_pause_quit && x <= right_bound_pause_quit)
                 {
                     pause_mouse_hover_quit = true;
                 }
                 else pause_mouse_hover_quit = false;
 
-                if(y>=down_bound_pause && y<=up_bound_pause && x>=left_bound_pause_resume && x<=right_bound_pause_resume)
+                if(y >= down_bound_pause && y <= up_bound_pause && x >= left_bound_pause_resume && x <= right_bound_pause_resume)
                 {
                     pause_mouse_hover_resume = true;
                 }
                 else pause_mouse_hover_resume = false;
                 break;
 
-        case 4: if(y>=down_bound_quit && y<=up_bound_quit && x>=left_bound_quit_yes && x<=right_bound_quit_yes)
+        case 4: if(y >= down_bound_quit && y <= up_bound_quit && x >= left_bound_quit_yes && x <= right_bound_quit_yes)
                 {
                     quit_mouse_hover_yes = true;
                 }
                 else quit_mouse_hover_yes = false;
 
-                if(y>=down_bound_quit && y<=up_bound_quit && x>=left_bound_quit_no && x<=right_bound_quit_no)
+                if(y >= down_bound_quit && y <= up_bound_quit && x >= left_bound_quit_no && x <= right_bound_quit_no)
                 {
                     quit_mouse_hover_no = true;
                 }

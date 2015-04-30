@@ -32,15 +32,15 @@ struct bullet{
 #include "move.cpp"
 #include "callback.cpp"
 
-GLdouble width=1200, height=800;
+GLdouble width = 1200, height = 800;
 double seg_len;
 int game_state;
 //Game State Values 1 = Start Menu 2 = In Action 3 = Pause MenuS 4 = Quit 5 = Exit- ThankYou Screen
 
 //Main Ship Variables
 bool ship_left, ship_right;
-int ship_x=(width/2) - VARA - (VARB/2.0), ship_y=PADDING_BELOW;
-unsigned int ship_span = VARA + VARA + VARB, FPS=60, UNIT_MOVE;
+int ship_x = (width/2) - VARA - (VARB/2.0), ship_y = PADDING_BELOW;
+unsigned int ship_span = VARA + VARA + VARB, FPS = 60, UNIT_MOVE;
 
 //Bomb Variables
 unsigned int MAX_BOMB;

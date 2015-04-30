@@ -47,10 +47,10 @@ void bullet_move()
     unsigned int i;
     float temps = height/((float)FPS);
     temps /= BULLET_SEC;
-    for(i=0;i<bullets.size();i++)
+    for(i = 0;i < bullets.size(); i++)
     {
         bullets[i].y += temps;
-        if(bullets[i].y>=height) bullets.erase(bullets.begin()+i),i--;
+        if(bullets[i].y>=height) bullets.erase(bullets.begin() + i),i--;
     }
 }
 
@@ -114,11 +114,11 @@ bool collison_bomb_ship(int bomb_ind)
         }
         else if(diffx-VARD<VARA+VARB)
         {
-            if(diffy<=VARC)
+            if(diffy <= VARC)
             return true;
             else //test for inside of top triangle
             {
-                if(diffx-VARD<=VARA+VARB/2.0)
+                if(diffx - VARD <= VARA+VARB/2.0)
                 return true;
                 else //CHECK WITH SLOPE
                 {
@@ -134,10 +134,10 @@ bool collison_bomb_ship(int bomb_ind)
         }
         else //check slope of right wing and decide
         {
-            if(VARA+VARA+VARB==diffx-VARD)
+            if(VARA + VARA + VARB== diffx - VARD)
             return false;
 
-            if((VARC/(2.0*VARA))<(diffy/(VARA+VARA+VARB-(diffx-VARD))))
+            if((VARC/(2.0*VARA)) < (diffy / (VARA + VARA + VARB - (diffx - VARD))))
             return false;
             else
             return true;
@@ -150,21 +150,21 @@ void detect_collisions()
 {
     //To detect collision between bomb and bullets
     unsigned int i,j;
-    for(i=0;i<bullets.size();i++)
-        for(j=0;j<MAX_BOMB;j++)
+    for(i = 0; i < bullets.size(); i++)
+        for(j = 0;j < MAX_BOMB; j++)
             if(bomb_present[j] && collision_bomb_bullet(bullets[i], j))
             {
                 curr_score += BOMB_MAX_SEC - bomb_speed[j] + 1;
                 bomb_present[j]=false;
                 BOMB_COUNT--;
-                bullets.erase(bullets.begin()+i);
+                bullets.erase(bullets.begin() + i);
                 i--;
                 break;
             }
 
     //To detect collision between main ship and bomb
     unsigned int ii;
-    for(ii=0;ii<BOMB_COUNT;ii++)
+    for(ii = 0; ii < BOMB_COUNT; ii++)
     {
         if(collison_bomb_ship(ii))
         {
@@ -174,7 +174,7 @@ void detect_collisions()
 }
 void timer_func(int v)
 {
-    if(game_state==2)
+    if(game_state == 2)
     {
         main_ship_move();
         bomb_move();
